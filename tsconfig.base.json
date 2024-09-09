@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@global_config": ["libs/global-config/src/index.ts"],
       "remote1/Module": ["apps/remote1/src/remote-entry.ts"]
     }
   },
