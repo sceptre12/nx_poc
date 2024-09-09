@@ -1,8 +1,43 @@
-# NxPoc
+# Monorepo Management Exploration
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+This NX-based monorepo is designed to test and showcase different theories and approaches to monorepo management. It combines package-based and integrated project structures to demonstrate various architectural patterns and tools.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+## Project Structure
+
+### Packages
+- **Rsbuild**: Exploring Rsbuild capabilities within a monorepo context.
+- **Modern JS**: Testing Modern JS integration in a package-based setup.
+
+### Apps
+- **Remote1**: A module federated React app functioning as a remote using Webpack.
+
+## Current Focus Areas
+
+1. **Zephyr Cloud Integration**: 
+   - Currently testing Zephyr Cloud (https://www.zephyr-cloud.io/) with Rsbuild.
+   - Note: Zephyr integration with Modern JS is in progress by the Zephyr team.
+
+2. **Planned Additions**:
+   - **Husky**: For automated linting and test execution on PR pushes.
+   - **Docker**: To ensure consistent development environments across the team.
+
+## Goals
+
+1. Explore and compare different monorepo management strategies.
+2. Evaluate the integration of various tools and frameworks within a monorepo structure.
+3. Optimize development workflow and ensure consistency across projects.
+
+## Future Enhancements
+
+- Further integration of NX features across projects.
+- Expansion of module federation examples.
+- Implementation of comprehensive CI/CD pipelines.
+
+
+
+With this POC I'm laying out all of the tooling for setting up users dev environment when working within the monorepo
+
+
 
 [Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/npm-workspaces-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
 
