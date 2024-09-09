@@ -25,7 +25,7 @@ pnpm new
 Build the app for production:
 
 ```bash
-pnpm build
+pnpm build 
 ```
 
 Preview the production build locally:
