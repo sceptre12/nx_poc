@@ -1,7 +1,7 @@
 {
-  "name": "remote1",
+  "name": "design-system-project",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/remote1/src",
+  "sourceRoot": "apps/design-system-project/src",
   "projectType": "application",
   "tags": [],
   "targets": {
@@ -9,7 +9,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/remote1/jest.config.ts"
+        "jestConfig": "apps/design-system-project/jest.config.ts"
       }
     }
   }
