@@ -35,7 +35,18 @@ This NX-based monorepo is designed to test and showcase different theories and a
 
 
 
-With this POC I'm laying out all of the tooling for setting up users dev environment when working within the monorepo
+With this POC I'm laying out all of the tooling for setting up users dev environment when working within the monorepo.
+
+# Get Started
+1. Pull down the repo
+2. Ensure you have node 20+
+3. Ensure you have pnpm (Install Link)[https://pnpm.io/installation]
+4. Inside of the nx_poc folder execute: `pnpm i`
+
+## How to launch projects:
+
+### Rsbuild Project
+
 
 
 
