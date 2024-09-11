@@ -1,8 +1,9 @@
 const { NxAppWebpackPlugin } = require('@nx/webpack/app-plugin');
 const { NxReactWebpackPlugin } = require('@nx/react/webpack-plugin');
+const {withZephyr} = require('zephyr-webpack-plugin');
 const { join } = require('path');
 
-module.exports = {
+module.exports = withZephyr()({
   output: {
     path: join(__dirname, '../../dist/apps/remote1'),
   },
@@ -27,4 +28,4 @@ module.exports = {
       // svgr: false
     }),
   ],
-};
+});
