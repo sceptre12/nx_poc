@@ -17,6 +17,9 @@ importers:
       tslib:
         specifier: ^2.3.0
         version: 2.7.0
+      zephyr-webpack-plugin:
+        specifier: ^0.0.17
+        version: 0.0.17(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.21.5)(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.94.0))
     devDependencies:
       '@babel/core':
         specifier: ^7.14.5
@@ -12274,6 +12277,11 @@ snapshots:
       find-package-json: 1.2.0
       webpack: 5.94.0(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.17.19)(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.94.0))
 
+  '@module-federation/automatic-vendor-federation@1.2.1(webpack@5.94.0(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.21.5)(webpack-cli@5.1.4))':
+    dependencies:
+      find-package-json: 1.2.0
+      webpack: 5.94.0(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.21.5)(webpack-cli@5.1.4)
+
   '@module-federation/bridge-react-webpack-plugin@0.6.1':
     dependencies:
       '@module-federation/sdk': 0.6.1
@@ -22967,6 +22975,25 @@ snapshots:
       is-ci: 3.0.1
       tslib: 2.7.0
       webpack: 5.94.0(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.17.19)(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.94.0))
+      zephyr-agent: 0.0.17
+      zephyr-edge-contract: 0.0.17
+    transitivePeerDependencies:
+      - '@cloudflare/workers-types'
+      - '@swc/core'
+      - bufferutil
+      - encoding
+      - esbuild
+      - supports-color
+      - uglify-js
+      - utf-8-validate
+      - webpack-cli
+
+  zephyr-webpack-plugin@0.0.17(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.21.5)(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.94.0)):
+    dependencies:
+      '@module-federation/automatic-vendor-federation': 1.2.1(webpack@5.94.0(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.21.5)(webpack-cli@5.1.4))
+      is-ci: 3.0.1
+      tslib: 2.7.0
+      webpack: 5.94.0(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.21.5)(webpack-cli@5.1.4)
       zephyr-agent: 0.0.17
       zephyr-edge-contract: 0.0.17
     transitivePeerDependencies:
