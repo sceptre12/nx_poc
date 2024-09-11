@@ -238,6 +238,9 @@ importers:
 
   packages/rsbuild_project:
     dependencies:
+      '@module-federation/enhanced':
+        specifier: ~0.6.0
+        version: 0.6.1(typescript@5.5.4)(webpack@5.94.0(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.17.19)(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.94.0)))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -12306,6 +12309,26 @@ snapshots:
       rambda: 9.3.0
       typescript: 5.5.4
       ws: 8.17.1
+    transitivePeerDependencies:
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+
+  '@module-federation/enhanced@0.6.1(typescript@5.5.4)(webpack@5.94.0(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.17.19)(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.94.0)))':
+    dependencies:
+      '@module-federation/bridge-react-webpack-plugin': 0.6.1
+      '@module-federation/dts-plugin': 0.6.1(typescript@5.5.4)
+      '@module-federation/managers': 0.6.1
+      '@module-federation/manifest': 0.6.1(typescript@5.5.4)
+      '@module-federation/rspack': 0.6.1(typescript@5.5.4)
+      '@module-federation/runtime-tools': 0.6.1
+      '@module-federation/sdk': 0.6.1
+      btoa: 1.2.1
+      upath: 2.0.1
+    optionalDependencies:
+      typescript: 5.5.4
+      webpack: 5.94.0(@swc/core@1.5.29(@swc/helpers@0.5.13))(esbuild@0.17.19)(webpack-cli@5.1.4(webpack-dev-server@5.1.0)(webpack@5.94.0))
     transitivePeerDependencies:
       - bufferutil
       - debug
