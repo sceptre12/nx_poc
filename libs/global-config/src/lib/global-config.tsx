@@ -1,3 +1,9 @@
+/**
+ * 
+ * These type of files can be dangerous if we have functions with side affects
+ * that are exectued when the file is imported.
+ */
+
 export function GlobalConfig() {
   return (
     <div className="text-pink-500 bg-gray-100 p-4 rounded-lg">

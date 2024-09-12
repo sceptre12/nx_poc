@@ -1,14 +1,17 @@
 const { NxAppWebpackPlugin } = require('@nx/webpack/app-plugin');
 const { NxReactWebpackPlugin } = require('@nx/react/webpack-plugin');
 const {withZephyr} = require('zephyr-webpack-plugin');
+const { ModuleFederationPlugin } = require('@module-federation/enhanced/webpack');
 const { join } = require('path');
+const {REMOTE1_PORT} = require('../../libs/global-constants/src/index.cjs');
+const baseConfig = require('./module-federation.config');
 
 module.exports = withZephyr()({
   output: {
     path: join(__dirname, '../../dist/apps/remote1'),
   },
   devServer: {
-    port: 4200,
+    port: REMOTE1_PORT,
   },
   plugins: [
     new NxAppWebpackPlugin({
@@ -27,5 +30,6 @@ module.exports = withZephyr()({
       // See: https://react-svgr.com/
       // svgr: false
     }),
+    new ModuleFederationPlugin(baseConfig),
   ],
 });

@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../dist/out-tsc",
+    "declaration": true,
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts", "src/lib/remote_names.cjs", "src/lib/remote_ports.cjs", "src/index.cjs"],
+  "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]
+}

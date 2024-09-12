@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@global-constants": ["libs/global-constants/src/index.cjs"],
       "@global_config": ["libs/global-config/src/index.ts"]
     }
   },
