@@ -1,6 +1,6 @@
 import { defineConfig } from '@rsbuild/core';
 import { ModuleFederationPlugin } from '@module-federation/enhanced/rspack';
-import { withZephyr } from 'zephyr-webpack-plugin';
+// import { withZephyr } from 'zephyr-webpack-plugin';
 import { pluginReact } from '@rsbuild/plugin-react';
 import {RSBUILD_REMOTE_NAME, RSBUILD_PROJECT_PORT} from '../../libs/global-constants/src/index';
 
@@ -37,7 +37,8 @@ export default defineConfig({
 
 
       // Adds in the zephyr configuration
-      return withZephyr()(config);
+      // return withZephyr()(config);
+      return config;
     },
   },
 });

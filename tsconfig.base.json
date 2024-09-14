@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@global-constants": ["libs/global-constants/src/index.cjs"],
-      "@global_config": ["libs/global-config/src/index.ts"]
+      "@global_config": ["libs/global-config/src/index.ts"],
+      "remote1/Module": ["apps/remote1/src/remote-entry.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

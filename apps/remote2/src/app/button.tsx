@@ -1,3 +1,3 @@
 export default function Button() {
-    return <div>Rspack Remote button</div>;
+    return <div>Remote 2 button</div>;
 }

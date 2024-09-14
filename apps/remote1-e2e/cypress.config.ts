@@ -13,6 +13,6 @@ export default defineConfig({
       ciWebServerCommand: 'pnpm exec nx run remote1:serve-static',
       ciBaseUrl: 'http://localhost:4200',
     }),
-    baseUrl: 'http://localhost:4200',
+    baseUrl: 'http://localhost:4203',
   },
 });

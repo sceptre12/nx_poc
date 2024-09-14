@@ -1,6 +1,6 @@
-
+const { REMOTE2_NAME } = require("../../libs/global-constants/src/index.cjs");
 module.exports = {
-  name: 'remote2',
+  name: REMOTE2_NAME,
   exposes: {
     './button': './src/app/button.tsx',
   },

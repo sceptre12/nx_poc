@@ -8,6 +8,7 @@
       "@/*": ["./src/*"],
       "@shared/*": ["./shared/*"],
       "*": ["./@mf-types/*"],
+      "@global-constants": ["../../libs/global-constants/src/index.cjs"],
     }
   },
   "include": ["src", "shared", "config", "modern.config.ts"],
