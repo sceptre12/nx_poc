@@ -1,0 +1,5 @@
+[core]
+    fsmonitor = true
+
+[fsmonitor]
+    mode = webhook

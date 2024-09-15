@@ -23,16 +23,16 @@ while getopts ":f" opt; do
 done
 
 # Get the list of processes
-processes=$(ps -ef | grep [.]nvm | awk '{print $2 " " $8}')
+processes=$(ps -ef | grep -E '\.n/bin|\.nvm' | grep -v grep | awk '{print $2 " " $8}')
 
 # Check if any processes were found
 if [ -z "$processes" ]; then
-    echo "No processes containing '.nvm' found."
+    echo "No processes containing '.n/bin' or '.nvm' found."
     exit 0
 fi
 
 # Display the processes
-echo "The following processes containing '.nvm' were found:"
+echo "The following processes containing '.n/bin' or '.nvm' were found:"
 echo "$processes"
 echo
 
