@@ -1,135 +1,79 @@
-# Monorepo Management Exploration
+# NX Monorepo Project
 
-This NX-based monorepo is designed to test and showcase different theories and approaches to monorepo management. It combines package-based and integrated project structures to demonstrate various architectural patterns and tools.
+This project is managed using NX, a powerful build system for monorepos. This README will guide you through getting started and running various parts of the project.
+
+## Getting Started
+
+To get started with this project, follow these steps:
+
+1. Ensure you have [Node.js](https://nodejs.org/) and [pnpm](https://pnpm.io/) installed on your system.
+
+2. Clone this repository to your local machine.
+
+3. Navigate to the project root directory in your terminal.
+
+4. Install the project dependencies by running:
+
+   ```
+   pnpm i
+   ```
+
+5. Once the installation is complete, you can run the entire application in development mode (see the commands section below).
+
+## Available Commands
+
+### Running the Full Application
+
+To run all projects in the monorepo simultaneously in development mode, use the following command:
+
+```
+nx run-many -t serve dev -p remote1 remote2 rsbuild_project modernjs_project --parallel 4
+```
+
+This command will start the development servers for `remote1`, `remote2`, `rsbuild_project`, and `modernjs_project` in parallel.
+
+### Running Individual Projects
+
+#### Projects in the `apps` folder:
+
+To run a specific project located in the `apps` folder, use:
+
+```
+nx run [project_name]:serve
+```
+
+Replace `[project_name]` with the name of the project you want to run (e.g., `remote1`, `remote2`).
+
+#### Projects in the `packages` folder:
+
+To run a specific project located in the `packages` folder, use:
+
+```
+nx run [project_name]:dev
+```
+
+Replace `[project_name]` with the name of the project you want to run (e.g., `rsbuild_project`, `modernjs_project`).
 
 ## Project Structure
 
-### Packages
-- **Rsbuild**: Exploring Rsbuild capabilities within a monorepo context.
-- **Modern JS**: Testing Modern JS integration in a package-based setup.
+- `apps/`: Contains main applications
+  - `remote1/`
+  - `remote2/`
+- `packages/`: Contains shared packages and libraries
+  - `rsbuild_project/`
+  - `modernjs_project/`
 
-### Apps
-- **Remote1**: A module federated React app functioning as a remote using Webpack.
+## Additional Information
 
-## Current Focus Areas
+- For more detailed information about each project, refer to their individual README files in their respective directories.
+- To learn more about NX and its capabilities, visit the [NX documentation](https://nx.dev/docs).
 
-1. **Zephyr Cloud Integration**: 
-   - Currently testing Zephyr Cloud (https://www.zephyr-cloud.io/) with Rsbuild.
-   - Note: Zephyr integration with Modern JS is in progress by the Zephyr team.
+## Troubleshooting
 
-2. **Planned Additions**:
-   - **Husky**: For automated linting and test execution on PR pushes.
-   - **Docker**: To ensure consistent development environments across the team.
+If you encounter any issues while running the commands, try the following:
 
-## Goals
+1. Ensure all dependencies are correctly installed (`pnpm i`).
+2. Clear the NX cache: `nx reset`
+3. Check for any error messages in the console and refer to the project-specific documentation.
 
-1. Explore and compare different monorepo management strategies.
-2. Evaluate the integration of various tools and frameworks within a monorepo structure.
-3. Optimize development workflow and ensure consistency across projects.
-
-## Future Enhancements
-
-- Further integration of NX features across projects.
-- Expansion of module federation examples.
-- Implementation of comprehensive CI/CD pipelines.
-
-
-
-With this POC I'm laying out all of the tooling for setting up users dev environment when working within the monorepo.
-
-# Get Started
-1. Pull down the repo
-2. Ensure you have node 20+
-3. Ensure you have pnpm (Install Link)[https://pnpm.io/installation]
-4. Inside of the nx_poc folder execute: `pnpm i`
-
-## How to launch projects:
-
-### Rsbuild Project
-
-
-
-
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/npm-workspaces-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
-
-## Finish your CI setup
-
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/o28ybMdNPq)
-
-
-## Run tasks
-
-To run tasks with Nx use:
-
-```sh
-npx nx <target> <project-name>
-```
-
-For example:
-
-```sh
-npx nx build myproject
-```
-
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Versioning and releasing
-
-To version and release the library use
-
-```
-npx nx release
-```
-
-Pass `--dry-run` to see what would happen without actually releasing the library.
-
-[Learn more about Nx release &raquo;](hhttps://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-To install a new plugin you can use the `nx add` command. Here's an example of adding the React plugin:
-```sh
-npx nx add @nx/react
-```
-
-Use the plugin's generator to create new projects. For example, to create a new React app or library:
-
-```sh
-# Genenerate an app
-npx nx g @nx/react:app demo
-
-# Generate a library
-npx nx g @nx/react:lib some-lib
-```
-
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
-
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/npm-workspaces-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+If problems persist, please open an issue in the project repository.

@@ -9,17 +9,7 @@
       "options": {
         "command": "modern dev",
         "cwd": "packages/modernjs_project"
-      },
-      "dependsOn": [
-        {
-          "projects": ["remote2","remote1"],
-          "target": "serve"
-        },
-        {
-          "projects": ["rsbuild_project"],
-          "target": "dev"
-        }
-      ]
+      }
     }
   },
   "implicitDependencies": ["remote1","remote2","rsbuild_project"],
