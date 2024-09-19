@@ -1,0 +1,27 @@
+{
+  "name": "modernjs_project",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/modernjs_project/src",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "modern dev",
+        "cwd": "packages/modernjs_project"
+      },
+      "dependsOn": [
+        {
+          "projects": ["remote2","remote1"],
+          "target": "serve"
+        },
+        {
+          "projects": ["rsbuild_project"],
+          "target": "dev"
+        }
+      ]
+    }
+  },
+  "implicitDependencies": ["remote1","remote2","rsbuild_project"],
+  "tags": []
+}
