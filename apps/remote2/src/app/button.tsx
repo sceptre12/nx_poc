@@ -1,3 +1,3 @@
 export default function Button() {
-    return <div>Remote 2 button</div>;
+    return <button className="bg-sky-500 hover:bg-sky-700">Remote 2</button>;
 }

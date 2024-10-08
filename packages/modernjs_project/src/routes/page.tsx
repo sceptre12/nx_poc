@@ -43,18 +43,22 @@ const Index = () => (
     <main>
       <div className="title">
         Welcome to
-        <p className="name">Modern.js</p>
+        <p className="name">Modern JS SHELL</p>
       </div>
+      <hr className='w-full h-px my-8 border-indigo-500' />
       <div>
-        <h1>This section is importing in a new component from module federation</h1>
+        <h1>This section is built during the build step for this app</h1>
           <RsbuildComponent />
       </div>
-      <div>
+      <hr className='w-full h-px my-8 border-indigo-500' />
+      <div className='border-4 border-sky-500 mb-4'>
+        <h1>This section is loaded at run time</h1>
         <Suspense fallback={<div>LOADING Remote1</div>}>
           <Remote1Component />
         </Suspense>
       </div>
-      <div>
+      <div className='border-4 border-indigo-500'>
+        <h1>This section is loaded at run time</h1>
         <Suspense fallback={<div>LOADING Remote2</div>}>
           <Remote2Component />
         </Suspense>

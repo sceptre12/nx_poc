@@ -1,9 +1,8 @@
-import NxWelcome from './nx-welcome';
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="remote1" />
+      <h1>THIS IS REMOTE 1</h1>
     </div>
   );
 }
