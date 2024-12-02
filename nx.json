@@ -102,5 +102,6 @@
         "staticStorybookTargetName": "static-storybook"
       }
     }
-  ]
+  ],
+  "useLegacyCache": true
 }
